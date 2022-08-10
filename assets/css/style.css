@@ -539,7 +539,7 @@ section {
   position: relative;
 }
 
-.resume .resume-item h4 {
+.resume .resume-item h4, .resume .resume-item a {
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
@@ -547,6 +547,10 @@ section {
   font-family: "Poppins", sans-serif;
   color: #0563bb;
   margin-bottom: 10px;
+}
+
+.resume .resume-item a:hover {
+  color: #0563bb;
 }
 
 .resume .resume-item h5 {
