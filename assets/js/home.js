@@ -1,97 +1,107 @@
-(function () {
+(() => {
   "use strict";
-
-  var jobs = [
+  const jobs = [
     {
-      "Company": "Eli Lilly and Company",
-      "Website": "http://www.lilly.com/",
-      "StartDate": "10/1/2012",
-      "EndDate": "2/1/2015",
-      "JobTitle": "Associate - Business Technical Lead",
-      "Descriptions": [
-        {
-          "Description": "In my role as an Associate - Business Technical Lead, I hit the ground running and was responsible for developing tools to analyze financial performance across multiple global functions ($260M annually). This resulted in the ability to review expenses, highlight trends, and identify key messages for senior management to drive business decisions."
-        }
+      featured: true,
+      date: "Jan 2026 — Present",
+      company: "Eli Lilly and Company · LRL – GRA",
+      title: "Associate Director, Global Regulatory Affairs (GRA) Strategy & Operations",
+      summary: "Partner with senior leadership to shape and execute the operating agenda for a global regulatory organization of more than 734 colleagues, connecting strategy with the people, processes, data, and technology needed to deliver.",
+      metrics: [{value:"734+",label:"global colleagues"}],
+      bullets: [
+        "Drive the operating agenda across business planning, workforce and financial management, operating model development, performance metrics, and strategic initiatives.",
+        "Build operational intelligence through dashboards for headcount, time-entry compliance, and travel and training activity; automate recurring reporting and communications.",
+        "Advance the GRA operating model, playbook, and rhythm of business, establishing scalable processes for procurement, sourcing, record retention, capacity planning, financial tracking, and performance metrics.",
+        "Lead strategic planning and resource-management work with Finance and cross-functional partners, including analytical tools for sourcing and acquisition-related resource decisions, a three-pillar onboarding modernization strategy, and a competency gap analysis.",
+        "Deliver enterprise initiatives from strategy through implementation, including the transition of due diligence to GRA, full ownership of the Linkage Hub, and standardized processes, training, and resource onboarding.",
+        "Apply generative AI, vibe coding, low-code platforms, and workflow automation to rapidly prototype solutions that reduce manual effort and improve operational effectiveness."
       ]
     },
     {
-      "Company": "Eli Lilly and Company",
-      "Website": "http://www.lilly.com/",
-      "StartDate": "3/1/2015",
-      "EndDate": "4/1/2017",
-      "JobTitle": "Senior Associate - Business Technical Lead",
-      "Descriptions": [
-        {
-          "Description": "I enjoy a good challenge and I have been promoted into every role I've ever had in my career. In my role as a Sr Associate - Business Technical Lead at Eli Lilly, I designed and implemented a sourcing system that reduced time and effort required by procurement, purchasing, and external sourcing by 97%. This not only improved Lilly's and vendors' satisfaction but also allowed me to conduct monthly meetings with the VP/CAO to review $260M yearly financial information."
-        }
+      date: "Oct 2022 — Jan 2026",
+      company: "Eli Lilly and Company · Medical Affairs",
+      title: "Senior Manager, Global Field Medical Strategy & Operations (FMSO)",
+      summary: "Led global field medical operations and enabled large-scale organizational growth, alignment, digital capability, and service-model improvements across more than 30 countries.",
+      metrics: [
+        {value:"700+",label:"global territories"},
+        {value:"60%",label:"less manual effort"},
+        {value:"3,000+",label:"alignment requests"}
+      ],
+      bullets: [
+        "Led the largest Field Medical expansion in Lilly's history, creating approximately 150 Veeva CRM territories across 16 affiliates.",
+        "Developed a centralized Veeva alignment request system to improve transparency, efficiency, and tracking across 3,000+ requests while streamlining change submissions.",
+        "Optimized intake and support processes to manage 2,300+ requests, reducing manual effort by 60% and freeing capacity for higher-value work.",
+        "Designed automated tools, dashboards, alerts, and standardized processes for Commercial and Medical role transitions, supporting 1,100+ employee onboarding, offboarding, and organizational changes.",
+        "Scaled Virtual Medical Hub CRM capabilities, Veeva Approved Email across 12 affiliates, and integrated Veeva CRM and Workday hierarchies to support performance, coaching, and engagement capabilities.",
+        "Developed executive dashboards and scorecards and built scalable training, onboarding, and communications capabilities across Global Field Medical."
       ]
     },
     {
-      "Company": "Eli Lilly and Company",
-      "Website": "http://www.lilly.com/",
-      "StartDate": "5/1/2017",
-      "EndDate": "2/1/2018",
-      "JobTitle": "Senior Associate - Project Management",
-      "Descriptions": [
-        {
-          "Description": "As a Senior Associate - Project Management, I was responsible for supporting neuroscience senior leadership from an operational perspective. I developed tools to monitor and track financials and analyze resource supply and demand gaps to minimize impact to the portfolio. I was also responsible for updating and improving the efficiency and accuracy of the neuroscience business planning models. In this role, I also I managed a cross-functional team to develop a tool to control functional changes and document, track, and monitor the status and impact of changes."
-        }
+      date: "Mar 2018 — Oct 2022",
+      company: "Eli Lilly and Company · LRL – CDDA",
+      title: "Manager, Project Management & Business Capabilities",
+      summary: "Advised leaders and built global programs, platforms, and analytics to strengthen workforce strategy, employee experience, and organizational capability.",
+      metrics: [
+        {value:"1,700+",label:"global workforce supported"},
+        {value:"20%+",label:"platform participation"},
+        {value:"+67%",label:"town hall attendance"}
+      ],
+      bullets: [
+        "Translated focus groups, surveys, and employee feedback into data-driven solutions addressing organizational needs.",
+        "Designed and implemented a global resourcing platform connecting employees to business-critical projects and strategic initiatives; engaged more than 20% of the organization in its first year and earned a Lilly Innovator Award.",
+        "Created global onboarding and professional development programs that accelerated time to productivity and remained in use more than seven years later.",
+        "Turned Workday data into descriptive analytics and trend insights using Power BI to inform workforce and talent strategy.",
+        "Increased global town hall attendance by 67% within two months and designed the first functional recognition program for a 1,500-person global organization."
       ]
     },
     {
-      "Company": "Eli Lilly and Company",
-      "Website": "http://www.lilly.com/",
-      "StartDate": "3/1/2018",
-      "EndDate": null,
-      "JobTitle": "Manager - Project Management and Business Capabilities",
-      "Descriptions": [
-        {
-          "Description": "I work as a Project Management and Business Capabilities Manager for Eli Lilly, a global leader in the pharmaceutical industry. I have been with the company for about 10 years and have had the privilege of using my skills to drive innovation and change while also leading teams to develop and implement programs to ensure efficiency and the smooth operation of the activities in my functional area. I work to improve the overall employee experience and in 2021, developed a program to recognize and reward employees for demonstrating the company values through their everyday actions and contributions. I also designed a platform to facilitate connecting a global workforce to crowdsource new and innovative solutions for unmet needs with more than 20% participation in the first year and continued growth in subsequent years. Most recently, I collaborated with senior leadership to produce development programs and playbooks targeted to onboard, support, develop, and empower talent."
-        }
+      date: "May 2017 — Feb 2018",
+      company: "Eli Lilly and Company · LRL – CDDA",
+      title: "Senior Associate, Neuroscience Project Management",
+      summary: "Supported neuroscience leadership with annual business planning, resource management, financial forecasting, and operational improvement.",
+      bullets: [
+        "Led annual business planning and updated Planisware models to improve workload efficiency and support strategic planning.",
+        "Developed financial forecasting and resource supply-and-demand tools using SAP data to support portfolio decisions and resource allocation.",
+        "Identified operational gaps and led automation initiatives that reduced manual work and improved process efficiency."
       ]
     },
     {
-      "Company": "Clint Pharmaceuticals",
-      "Website": "http://www.clintpharmaceuticals.com/",
-      "StartDate": "1/1/2010",
-      "EndDate": "10/1/2012",
-      "JobTitle": "Lead Buyer / Client Relations",
-      "Descriptions": [
-        {
-          "Description": "In 2010, I started my career in the pharmaceutical industry as Client Relations Representative at Clint Pharmaceuticals. After just over a year, I was promoted to the companies lead buyer position and quickly discovered the power of automation. In under 6 months, I automated a manual purchasing system and reduced procurement time by 50%. I used the freed capacity to support the business in other areas including product complaints and returns. I am an analytical thinker so in this role, I also conducted data analysis to forecast future potential sales and present cost-benefit analyses to key stakeholders to drive critical purchasing decisions. I maintained close interactions with accounting, which allowed me to capitalize on early payment discounts, maximize rebates from vendors, and appropriately manage inventory to optimize taxes. I am also highly skilled in analyzing client purchase history in order to determine what additional/new products are needed and capitalizing on it."
-        }
+      date: "Oct 2012 — Apr 2017",
+      company: "Eli Lilly and Company · LRL – MDU",
+      title: "Associate / Senior Associate, Business Technical Lead",
+      summary: "Combined financial analysis, vendor and contract management, and process design to improve leadership decision-making and sourcing efficiency.",
+      metrics: [
+        {value:"97%",label:"less sourcing time and effort"},
+        {value:"$40M",label:"annual vendor contracts"},
+        {value:"$260M",label:"annual financial reviews"}
+      ],
+      bullets: [
+        "Led monthly financial reviews with senior leadership covering approximately $260 million annually, analyzing variances, trends, and risks to support decisions.",
+        "Managed strategic and niche vendor relationships and contracts totaling approximately $40 million annually.",
+        "Designed and implemented a sourcing system that streamlined procurement, purchasing, and vendor sourcing, reducing time and effort by 97%."
       ]
     }
   ];
 
-  var convertDateFormat = function(dt) {
-    if (dt){
-      dt = new Date(dt);
-      return new Date(dt.getFullYear(), dt.getUTCMonth(), dt.getDate()).toLocaleDateString('en-us', { year:"numeric", month:"long"});
-    }
-    
-    return null;
+  const list = document.getElementById("professional-experience");
+  const escapeText = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  })[char]);
+
+  if (list) {
+    list.innerHTML = jobs.map((job) => `
+      <article class="experience-item${job.featured ? " experience-item-featured" : ""}">
+        <div class="experience-date">${escapeText(job.date)}</div>
+        <div class="experience-content">
+          <p class="experience-company">${escapeText(job.company)}</p>
+          <h3 class="experience-title">${escapeText(job.title)}</h3>
+          <p class="experience-summary">${escapeText(job.summary)}</p>
+          ${job.metrics ? `<div class="experience-metrics">${job.metrics.map((metric) => `<div class="experience-metric"><strong>${escapeText(metric.value)}</strong><span>${escapeText(metric.label)}</span></div>`).join("")}</div>` : ""}
+          <ul class="experience-bullets">${job.bullets.map((bullet) => `<li>${escapeText(bullet)}</li>`).join("")}</ul>
+        </div>
+      </article>
+    `).join("");
   }
-
-  jobs.sort(function(a, b){
-    return new Date(b.StartDate) - new Date(a.StartDate);
-  }).forEach(function(job){
-    var container = $('#professional-experience');
-    var parent = $('<div />').addClass('resume-item');
-    var website = $('<a />').attr('href', job.Website).attr('target', '_blank').text(job.Company);
-    var company = $('<h4 />').html(website);
-    var duration = $('<h5 />').text(convertDateFormat(job.StartDate) + " - " + (convertDateFormat(job.EndDate) || 'Current'));
-    var jobTitle = $('<em />').text(job.JobTitle);
-    var title = $('<p />').html(jobTitle);
-
-    parent.append(company).append(duration).append(title);
-
-    (job.Descriptions || []).forEach(function(d){
-      var description = $('<p />').html(d.Description);
-      parent.append(description);
-    });
-
-    container.append(parent);
-  });
-
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 })();
