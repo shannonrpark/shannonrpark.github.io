@@ -2,10 +2,12 @@
   "use strict";
   const jobs = [
     {
+      featured: true,
       date: "Jan 2026 — Present",
       company: "Eli Lilly and Company · LRL – GRA",
       title: "Associate Director, Global Regulatory Affairs (GRA) Strategy & Operations",
-      summary: "Partner with senior leadership to shape and execute the operating agenda for a 715-person global regulatory function, connecting strategy with the people, processes, data, and technology needed to deliver.",
+      summary: "Partner with senior leadership to shape and execute the operating agenda for a global regulatory organization of more than 734 colleagues, connecting strategy with the people, processes, data, and technology needed to deliver.",
+      metrics: [{value:"734+",label:"global colleagues"}],
       bullets: [
         "Drive the operating agenda across business planning, workforce and financial management, operating model development, performance metrics, and strategic initiatives.",
         "Build operational intelligence through dashboards for headcount, time-entry compliance, and travel and training activity; automate recurring reporting and communications.",
@@ -20,8 +22,13 @@
       company: "Eli Lilly and Company · Medical Affairs",
       title: "Senior Manager, Global Field Medical Strategy & Operations (FMSO)",
       summary: "Led global field medical operations and enabled large-scale organizational growth, alignment, digital capability, and service-model improvements across more than 30 countries.",
+      metrics: [
+        {value:"700+",label:"global territories"},
+        {value:"60%",label:"less manual effort"},
+        {value:"3,000+",label:"alignment requests"}
+      ],
       bullets: [
-        "Oversaw hierarchy and territory alignment across 700+ global Field Medical territories and led the largest Field Medical expansion in Lilly's history, creating approximately 150 Veeva CRM territories across 16 affiliates.",
+        "Led the largest Field Medical expansion in Lilly's history, creating approximately 150 Veeva CRM territories across 16 affiliates.",
         "Developed a centralized Veeva alignment request system to improve transparency, efficiency, and tracking across 3,000+ requests while streamlining change submissions.",
         "Optimized intake and support processes to manage 2,300+ requests, reducing manual effort by 60% and freeing capacity for higher-value work.",
         "Designed automated tools, dashboards, alerts, and standardized processes for Commercial and Medical role transitions, supporting 1,100+ employee onboarding, offboarding, and organizational changes.",
@@ -33,7 +40,12 @@
       date: "Mar 2018 — Oct 2022",
       company: "Eli Lilly and Company · LRL – CDDA",
       title: "Manager, Project Management & Business Capabilities",
-      summary: "Advised leaders and built global programs, platforms, and analytics to strengthen workforce strategy, employee experience, and organizational capability for a 1,700+ person global workforce.",
+      summary: "Advised leaders and built global programs, platforms, and analytics to strengthen workforce strategy, employee experience, and organizational capability.",
+      metrics: [
+        {value:"1,700+",label:"global workforce supported"},
+        {value:"20%+",label:"platform participation"},
+        {value:"+67%",label:"town hall attendance"}
+      ],
       bullets: [
         "Translated focus groups, surveys, and employee feedback into data-driven solutions addressing organizational needs.",
         "Designed and implemented a global resourcing platform connecting employees to business-critical projects and strategic initiatives; engaged more than 20% of the organization in its first year and earned a Lilly Innovator Award.",
@@ -58,6 +70,11 @@
       company: "Eli Lilly and Company · LRL – MDU",
       title: "Associate / Senior Associate, Business Technical Lead",
       summary: "Combined financial analysis, vendor and contract management, and process design to improve leadership decision-making and sourcing efficiency.",
+      metrics: [
+        {value:"97%",label:"less sourcing time and effort"},
+        {value:"$40M",label:"annual vendor contracts"},
+        {value:"$260M",label:"annual financial reviews"}
+      ],
       bullets: [
         "Led monthly financial reviews with senior leadership covering approximately $260 million annually, analyzing variances, trends, and risks to support decisions.",
         "Managed strategic and niche vendor relationships and contracts totaling approximately $40 million annually.",
@@ -73,12 +90,13 @@
 
   if (list) {
     list.innerHTML = jobs.map((job) => `
-      <article class="experience-item">
+      <article class="experience-item${job.featured ? " experience-item-featured" : ""}">
         <div class="experience-date">${escapeText(job.date)}</div>
-        <div>
+        <div class="experience-content">
           <p class="experience-company">${escapeText(job.company)}</p>
           <h3 class="experience-title">${escapeText(job.title)}</h3>
           <p class="experience-summary">${escapeText(job.summary)}</p>
+          ${job.metrics ? `<div class="experience-metrics">${job.metrics.map((metric) => `<div class="experience-metric"><strong>${escapeText(metric.value)}</strong><span>${escapeText(metric.label)}</span></div>`).join("")}</div>` : ""}
           <ul class="experience-bullets">${job.bullets.map((bullet) => `<li>${escapeText(bullet)}</li>`).join("")}</ul>
         </div>
       </article>
